@@ -87,22 +87,37 @@
 
 
 
-<meta name="description" content="XMLHttpRequest创建对象1const xhr = new XMLHttpRequest();
-初始化请求XMLHttpRequest对象如果要用于AJAX的话,其，open()方法的async参数必须设置为true12//async：true（异步）或 false（同步）xhr.open(&apos;method&apos;, &apos;url&apos;, async);
-向请求添加 HTTP 头1xhr.setReq">
+<meta name="description" content="canvas特点canvas是基于状态的绘制
+
+绘制流程创建上下文环境1getContext(&apos;2d&apos;);
+设置线段路径12moveTo(x, y);lineTo(x, y);
+状态设置12strokeStyle = &apos;color&apos;;lineWidth = 10;
+指定新的绘制1beginPath()
+开始绘制1stroke();
+HTML Canvas 参考手册">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Ajax">
-<meta property="og:url" content="http://yoursite.com/2017/03/15/20170315-1/index.html">
+<meta property="og:title" content="canvas">
+<meta property="og:url" content="http://yoursite.com/2017/03/15/20170315-2/index.html">
 <meta property="og:site_name" content="Huaji.js">
-<meta property="og:description" content="XMLHttpRequest创建对象1const xhr = new XMLHttpRequest();
-初始化请求XMLHttpRequest对象如果要用于AJAX的话,其，open()方法的async参数必须设置为true12//async：true（异步）或 false（同步）xhr.open(&apos;method&apos;, &apos;url&apos;, async);
-向请求添加 HTTP 头1xhr.setReq">
-<meta property="og:updated_time" content="2017-03-15T00:49:19.465Z">
+<meta property="og:description" content="canvas特点canvas是基于状态的绘制
+
+绘制流程创建上下文环境1getContext(&apos;2d&apos;);
+设置线段路径12moveTo(x, y);lineTo(x, y);
+状态设置12strokeStyle = &apos;color&apos;;lineWidth = 10;
+指定新的绘制1beginPath()
+开始绘制1stroke();
+HTML Canvas 参考手册">
+<meta property="og:updated_time" content="2017-03-18T21:31:34.459Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Ajax">
-<meta name="twitter:description" content="XMLHttpRequest创建对象1const xhr = new XMLHttpRequest();
-初始化请求XMLHttpRequest对象如果要用于AJAX的话,其，open()方法的async参数必须设置为true12//async：true（异步）或 false（同步）xhr.open(&apos;method&apos;, &apos;url&apos;, async);
-向请求添加 HTTP 头1xhr.setReq">
+<meta name="twitter:title" content="canvas">
+<meta name="twitter:description" content="canvas特点canvas是基于状态的绘制
+
+绘制流程创建上下文环境1getContext(&apos;2d&apos;);
+设置线段路径12moveTo(x, y);lineTo(x, y);
+状态设置12strokeStyle = &apos;color&apos;;lineWidth = 10;
+指定新的绘制1beginPath()
+开始绘制1stroke();
+HTML Canvas 参考手册">
 
 
 
@@ -130,13 +145,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/2017/03/15/20170315-1/"/>
+  <link rel="canonical" href="http://yoursite.com/2017/03/15/20170315-2/"/>
 
 
 
 
 
-  <title> Ajax | Huaji.js </title>
+  <title> canvas | Huaji.js </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -245,7 +260,7 @@
   
 
   <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/03/15/20170315-1/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/03/15/20170315-2/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Felese">
@@ -266,7 +281,7 @@
             
             
               
-                Ajax
+                canvas
               
             
           </h1>
@@ -281,7 +296,7 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-03-15T02:39:00+08:00">
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-03-15T22:40:26+08:00">
                 2017-03-15
               </time>
             
@@ -318,25 +333,14 @@
 
       
         <hr>
-<h3 id="XMLHttpRequest"><a href="#XMLHttpRequest" class="headerlink" title="XMLHttpRequest"></a>XMLHttpRequest</h3><p>创建对象<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">const</span> xhr = <span class="keyword">new</span> XMLHttpRequest();</div></pre></td></tr></table></figure></p>
-<p>初始化请求<br>XMLHttpRequest对象如果要用于AJAX的话,其，open()方法的async参数必须设置为true<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="comment">//async：true（异步）或 false（同步）</span></div><div class="line">xhr.open(<span class="string">'method'</span>, <span class="string">'url'</span>, <span class="keyword">async</span>);</div></pre></td></tr></table></figure></p>
-<p>向请求添加 HTTP 头<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">xhr.setRequestHeader(<span class="string">'header'</span>,<span class="string">'value'</span>);</div></pre></td></tr></table></figure></p>
-<p>将请求发送到服务器<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">xhr.send(<span class="string">''</span>);</div></pre></td></tr></table></figure></p>
-<p>回调函数<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">xhr.onreadystatechange = <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</div><div class="line">    <span class="keyword">if</span> (xhr.readyState === <span class="number">4</span> &amp;&amp; xhr.status === <span class="number">200</span>) &#123;</div><div class="line">        <span class="comment">//...</span></div><div class="line">    &#125;</div><div class="line">&#125;;</div></pre></td></tr></table></figure></p>
-<p>状态值</p>
-<blockquote>
-<p>readyState状态<br>0: 请求未初始化<br>1: 服务器连接已建立<br>2: 请求已接收<br>3: 请求处理中<br>4: 请求已完成，且响应已就绪<br>status状态<br>200: “OK”<br>404: 未找到页面</p>
-</blockquote>
-<p>服务器响应<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">xhr.responseText <span class="comment">//获得字符串形式的响应数据</span></div><div class="line">xhr.responseXML <span class="comment">//获得 XML 形式的响应数据</span></div></pre></td></tr></table></figure></p>
-<h3 id="跨域问题解决方案"><a href="#跨域问题解决方案" class="headerlink" title="跨域问题解决方案"></a>跨域问题解决方案</h3><p>JSONP</p>
-<blockquote>
-<p>script标签不受同源策略的限制，因为script标签引入文件的内容，客户端的js是获取不到的，所以不会影响到源文件的安全，所以无需遵循同源策略。而ajax引入的源文件内容能够被客户端js所获取，为了安全，ajax必须遵循同源策略。<br>不足：<br>1.只支持GET而不支持POST等类型的HTTP请求<br>2.需要提供回调函数接口</p>
-</blockquote>
-<p>动态创建script标签</p>
-<blockquote>
-<p>返回js变量，JSONP跨域的简化版，JSONP只是在此基础上加入了回调函数</p>
-</blockquote>
-<p>flash URLLoader<br>Access Control<br>window.name<br>服务器代理<br>document.domain<br>location.hash<br>postMessage</p>
+<h3 id="canvas特点"><a href="#canvas特点" class="headerlink" title="canvas特点"></a>canvas特点</h3><p>canvas是基于状态的绘制</p>
+<hr>
+<h3 id="绘制流程"><a href="#绘制流程" class="headerlink" title="绘制流程"></a>绘制流程</h3><p>创建上下文环境<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">getContext(<span class="string">'2d'</span>);</div></pre></td></tr></table></figure></p>
+<p>设置线段路径<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">moveTo(x, y);</div><div class="line">lineTo(x, y);</div></pre></td></tr></table></figure></p>
+<p>状态设置<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">strokeStyle = <span class="string">'color'</span>;</div><div class="line">lineWidth = <span class="number">10</span>;</div></pre></td></tr></table></figure></p>
+<p>指定新的绘制<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">beginPath()</div></pre></td></tr></table></figure></p>
+<p>开始绘制<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">stroke();</div></pre></td></tr></table></figure></p>
+<p><a href="http://www.runoob.com/tags/ref-canvas.html" target="_blank" rel="external">HTML Canvas 参考手册</a></p>
 
       
     </div>
@@ -367,8 +371,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2017/03/11/20170311-1/" rel="next" title="const myExperience = new Demo();">
-                <i class="fa fa-chevron-left"></i> const myExperience = new Demo();
+              <a href="/2017/03/15/20170315-1/" rel="next" title="Ajax">
+                <i class="fa fa-chevron-left"></i> Ajax
               </a>
             
           </div>
@@ -377,8 +381,8 @@
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2017/03/15/20170315-2/" rel="prev" title="canvas">
-                canvas <i class="fa fa-chevron-right"></i>
+              <a href="/2017/03/19/20170319-1/" rel="prev" title="javascript异步">
+                javascript异步 <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -490,7 +494,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#XMLHttpRequest"><span class="nav-number">1.</span> <span class="nav-text">XMLHttpRequest</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#跨域问题解决方案"><span class="nav-number">2.</span> <span class="nav-text">跨域问题解决方案</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#canvas特点"><span class="nav-number">1.</span> <span class="nav-text">canvas特点</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#绘制流程"><span class="nav-number">2.</span> <span class="nav-text">绘制流程</span></a></li></ol></div>
             
 
           </div>

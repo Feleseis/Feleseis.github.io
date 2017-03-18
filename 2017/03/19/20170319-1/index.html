@@ -87,22 +87,40 @@
 
 
 
-<meta name="description" content="XMLHttpRequest创建对象1const xhr = new XMLHttpRequest();
-初始化请求XMLHttpRequest对象如果要用于AJAX的话,其，open()方法的async参数必须设置为true12//async：true（异步）或 false（同步）xhr.open(&apos;method&apos;, &apos;url&apos;, async);
-向请求添加 HTTP 头1xhr.setReq">
+<meta name="description" content="基本概念单线程
+
+JS引擎中负责解释和执行JavaScript代码的线程只有一个处理AJAX请求、处理DOM事件、定时器等为其他线程
+
+同步和异步
+
+同步——阻塞式调用，等待执行，能得到预期结果
+
+12345678function add(...number) &amp;#123;    let sum = 0;    for (var i = 0; i &amp;lt; number.length; i++)">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Ajax">
-<meta property="og:url" content="http://yoursite.com/2017/03/15/20170315-1/index.html">
+<meta property="og:title" content="javascript异步">
+<meta property="og:url" content="http://yoursite.com/2017/03/19/20170319-1/index.html">
 <meta property="og:site_name" content="Huaji.js">
-<meta property="og:description" content="XMLHttpRequest创建对象1const xhr = new XMLHttpRequest();
-初始化请求XMLHttpRequest对象如果要用于AJAX的话,其，open()方法的async参数必须设置为true12//async：true（异步）或 false（同步）xhr.open(&apos;method&apos;, &apos;url&apos;, async);
-向请求添加 HTTP 头1xhr.setReq">
-<meta property="og:updated_time" content="2017-03-15T00:49:19.465Z">
+<meta property="og:description" content="基本概念单线程
+
+JS引擎中负责解释和执行JavaScript代码的线程只有一个处理AJAX请求、处理DOM事件、定时器等为其他线程
+
+同步和异步
+
+同步——阻塞式调用，等待执行，能得到预期结果
+
+12345678function add(...number) &amp;#123;    let sum = 0;    for (var i = 0; i &amp;lt; number.length; i++)">
+<meta property="og:updated_time" content="2017-03-18T21:30:43.799Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Ajax">
-<meta name="twitter:description" content="XMLHttpRequest创建对象1const xhr = new XMLHttpRequest();
-初始化请求XMLHttpRequest对象如果要用于AJAX的话,其，open()方法的async参数必须设置为true12//async：true（异步）或 false（同步）xhr.open(&apos;method&apos;, &apos;url&apos;, async);
-向请求添加 HTTP 头1xhr.setReq">
+<meta name="twitter:title" content="javascript异步">
+<meta name="twitter:description" content="基本概念单线程
+
+JS引擎中负责解释和执行JavaScript代码的线程只有一个处理AJAX请求、处理DOM事件、定时器等为其他线程
+
+同步和异步
+
+同步——阻塞式调用，等待执行，能得到预期结果
+
+12345678function add(...number) &amp;#123;    let sum = 0;    for (var i = 0; i &amp;lt; number.length; i++)">
 
 
 
@@ -130,13 +148,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/2017/03/15/20170315-1/"/>
+  <link rel="canonical" href="http://yoursite.com/2017/03/19/20170319-1/"/>
 
 
 
 
 
-  <title> Ajax | Huaji.js </title>
+  <title> javascript异步 | Huaji.js </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -245,7 +263,7 @@
   
 
   <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/03/15/20170315-1/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/03/19/20170319-1/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Felese">
@@ -266,7 +284,7 @@
             
             
               
-                Ajax
+                javascript异步
               
             
           </h1>
@@ -281,8 +299,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-03-15T02:39:00+08:00">
-                2017-03-15
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-03-19T04:30:42+08:00">
+                2017-03-19
               </time>
             
 
@@ -318,25 +336,32 @@
 
       
         <hr>
-<h3 id="XMLHttpRequest"><a href="#XMLHttpRequest" class="headerlink" title="XMLHttpRequest"></a>XMLHttpRequest</h3><p>创建对象<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">const</span> xhr = <span class="keyword">new</span> XMLHttpRequest();</div></pre></td></tr></table></figure></p>
-<p>初始化请求<br>XMLHttpRequest对象如果要用于AJAX的话,其，open()方法的async参数必须设置为true<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="comment">//async：true（异步）或 false（同步）</span></div><div class="line">xhr.open(<span class="string">'method'</span>, <span class="string">'url'</span>, <span class="keyword">async</span>);</div></pre></td></tr></table></figure></p>
-<p>向请求添加 HTTP 头<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">xhr.setRequestHeader(<span class="string">'header'</span>,<span class="string">'value'</span>);</div></pre></td></tr></table></figure></p>
-<p>将请求发送到服务器<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">xhr.send(<span class="string">''</span>);</div></pre></td></tr></table></figure></p>
-<p>回调函数<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">xhr.onreadystatechange = <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</div><div class="line">    <span class="keyword">if</span> (xhr.readyState === <span class="number">4</span> &amp;&amp; xhr.status === <span class="number">200</span>) &#123;</div><div class="line">        <span class="comment">//...</span></div><div class="line">    &#125;</div><div class="line">&#125;;</div></pre></td></tr></table></figure></p>
-<p>状态值</p>
+<h3 id="基本概念"><a href="#基本概念" class="headerlink" title="基本概念"></a>基本概念</h3><p>单线程</p>
 <blockquote>
-<p>readyState状态<br>0: 请求未初始化<br>1: 服务器连接已建立<br>2: 请求已接收<br>3: 请求处理中<br>4: 请求已完成，且响应已就绪<br>status状态<br>200: “OK”<br>404: 未找到页面</p>
+<p>JS引擎中负责解释和执行JavaScript代码的线程只有一个<br>处理AJAX请求、处理DOM事件、定时器等为其他线程</p>
 </blockquote>
-<p>服务器响应<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">xhr.responseText <span class="comment">//获得字符串形式的响应数据</span></div><div class="line">xhr.responseXML <span class="comment">//获得 XML 形式的响应数据</span></div></pre></td></tr></table></figure></p>
-<h3 id="跨域问题解决方案"><a href="#跨域问题解决方案" class="headerlink" title="跨域问题解决方案"></a>跨域问题解决方案</h3><p>JSONP</p>
+<p>同步和异步</p>
 <blockquote>
-<p>script标签不受同源策略的限制，因为script标签引入文件的内容，客户端的js是获取不到的，所以不会影响到源文件的安全，所以无需遵循同源策略。而ajax引入的源文件内容能够被客户端js所获取，为了安全，ajax必须遵循同源策略。<br>不足：<br>1.只支持GET而不支持POST等类型的HTTP请求<br>2.需要提供回调函数接口</p>
+<p>同步——阻塞式调用，等待执行，能得到预期结果</p>
 </blockquote>
-<p>动态创建script标签</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">add</span>(<span class="params">...number</span>) </span>&#123;</div><div class="line">    <span class="keyword">let</span> sum = <span class="number">0</span>;</div><div class="line">    <span class="keyword">for</span> (<span class="keyword">var</span> i = <span class="number">0</span>; i &lt; number.length; i++) &#123;</div><div class="line">        sum += number[i];</div><div class="line">    &#125;</div><div class="line">    <span class="keyword">return</span> sum;</div><div class="line">&#125;</div><div class="line"><span class="built_in">console</span>.log(add(<span class="number">1</span>, <span class="number">3</span>, <span class="number">5</span>, <span class="number">6</span>));</div></pre></td></tr></table></figure>
 <blockquote>
-<p>返回js变量，JSONP跨域的简化版，JSONP只是在此基础上加入了回调函数</p>
+<p>异步—— 非阻塞，通知获取结果， 不能得到预期结果</p>
 </blockquote>
-<p>flash URLLoader<br>Access Control<br>window.name<br>服务器代理<br>document.domain<br>location.hash<br>postMessage</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">fs.readFile(<span class="string">'a.txt'</span>, <span class="string">'utf8'</span>, <span class="function"><span class="keyword">function</span>(<span class="params">err, data</span>) </span>&#123;</div><div class="line">    <span class="built_in">console</span>.log(data);</div><div class="line">&#125;);</div></pre></td></tr></table></figure>
+<hr>
+<h3 id="异步过程"><a href="#异步过程" class="headerlink" title="异步过程"></a>异步过程</h3><blockquote>
+<p>主线程发起一个异步请求，相应的工作线程接收请求并告知主线程已收到(异步函数返回)；<br>主线程可以继续执行后面的代码，同时工作线程执行异步任务；<br>工作线程完成工作后，通知主线程；<br>主线程收到通知后，执行一定的动作(调用回调函数)。</p>
+</blockquote>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line"><span class="comment">// 发起函数(或叫注册函数)A</span></div><div class="line"><span class="comment">// 回调函数callbackFn</span></div><div class="line"><span class="comment">// 注册函数用来发起异步过程，回调函数用来处理结果</span></div><div class="line">A(args..., callbackFn)</div><div class="line"></div><div class="line"><span class="comment">//发起函数和回调函数可以是分离的</span></div><div class="line"><span class="keyword">var</span> xhr = <span class="keyword">new</span> XMLHttpRequest();</div><div class="line">xhr.onreadystatechange = <span class="function"><span class="params">()</span> =&gt;</span> &#123;&#125;; <span class="comment">// 添加回调函数</span></div><div class="line">xhr.open(<span class="string">'GET'</span>, url);</div><div class="line">xhr.send(); <span class="comment">// 发起函数</span></div></pre></td></tr></table></figure>
+<hr>
+<h3 id="消息队列和事件循环"><a href="#消息队列和事件循环" class="headerlink" title="消息队列和事件循环"></a>消息队列和事件循环</h3><blockquote>
+<p>工作线程将消息放到消息队列，主线程通过事件循环过程去取消息。<br>消息队列：消息队列是一个先进先出的队列，它里面存放着各种消息。<br>事件循环：事件循环是指主线程重复从消息队列中取消息、执行的过程。<br>主线程只会做一件事情，就是从消息队列里面取消息、执行消息，再取消息、再执行。<br>当消息队列为空时，就会等待直到消息队列变成非空。而且主线程只有在将当前的消息执行完成后，才会去取下一个消息。<br>这种机制就叫做事件循环机制，取一个消息并执行的过程叫做一次循环。<br>异步过程的回调函数，一定不在当前这一轮事件循环中执行。</p>
+</blockquote>
+<p><pre><br>        |-         执行其他代码              -|- 执行回调函数 -|<br>主线程=============================================================&gt;<br>        |                                    |<br>        |                 |-     取出消息    -|<br>        |                 |<br>    发起异步任务         消息1, 消息2, 消息3, 消息4 &lt;== 消息队列<br>        |                                    |<br>        |           |-      存放消息         -|<br>        |           |<br>其他线程=============================================================&gt;<br>        |- 执行异步 -|</pre></p>
+<h2 id=""><a href="#" class="headerlink" title=""></a></h2><h3 id="异步与事件"><a href="#异步与事件" class="headerlink" title="异步与事件"></a>异步与事件</h3><blockquote>
+<p>消息队列中的每条消息实际上都对应着一个事件</p>
+</blockquote>
 
       
     </div>
@@ -367,8 +392,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2017/03/11/20170311-1/" rel="next" title="const myExperience = new Demo();">
-                <i class="fa fa-chevron-left"></i> const myExperience = new Demo();
+              <a href="/2017/03/15/20170315-2/" rel="next" title="canvas">
+                <i class="fa fa-chevron-left"></i> canvas
               </a>
             
           </div>
@@ -376,10 +401,6 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2017/03/15/20170315-2/" rel="prev" title="canvas">
-                canvas <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -490,7 +511,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#XMLHttpRequest"><span class="nav-number">1.</span> <span class="nav-text">XMLHttpRequest</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#跨域问题解决方案"><span class="nav-number">2.</span> <span class="nav-text">跨域问题解决方案</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#基本概念"><span class="nav-number">1.</span> <span class="nav-text">基本概念</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#异步过程"><span class="nav-number">2.</span> <span class="nav-text">异步过程</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#消息队列和事件循环"><span class="nav-number">3.</span> <span class="nav-text">消息队列和事件循环</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#"><span class="nav-number"></span> <span class="nav-text"></span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#异步与事件"><span class="nav-number">1.</span> <span class="nav-text">异步与事件</span></a></li></ol></div>
             
 
           </div>
