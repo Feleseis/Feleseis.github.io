@@ -98,7 +98,16 @@
 
 2017">
 <meta property="og:image" content="http://on16qa9r1.bkt.clouddn.com/20170319060142.png">
-<meta property="og:updated_time" content="2017-03-21T11:46:50.136Z">
+<meta property="og:image" content="http://on16qa9r1.bkt.clouddn.com/20170322.png">
+<meta property="og:image" content="http://on16qa9r1.bkt.clouddn.com/20170328184437.png">
+<meta property="og:image" content="http://on16qa9r1.bkt.clouddn.com/20170408005014.png">
+<meta property="og:image" content="http://on16qa9r1.bkt.clouddn.com/20170408005054.png">
+<meta property="og:image" content="http://on16qa9r1.bkt.clouddn.com/20170408005114.png">
+<meta property="og:image" content="http://on16qa9r1.bkt.clouddn.com/20170408005125.png">
+<meta property="og:image" content="http://on16qa9r1.bkt.clouddn.com/20170408005303.png">
+<meta property="og:image" content="http://on16qa9r1.bkt.clouddn.com/20170408005326.png">
+<meta property="og:image" content="http://on16qa9r1.bkt.clouddn.com/20170408005439.png">
+<meta property="og:updated_time" content="2017-04-07T17:08:18.958Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="const myExperience = new Demo();">
 <meta name="twitter:description" content="20170311首先是对自己从年后开始自学以来的一个综合考验与锻炼，其次是希望这个demo能够在找工作的时候能很好地向面试官展示自己的能力。初步设想是做个小游戏，当然不是网上那些常见的诸如2048、别踩白块之类的。当然不是说这些很low，而是想做个与众不同的，即能综合运用到所学的内容、又能让人有眼前一亮的感觉，岂不美哉？游戏的具体细节目前还没什么头绪，只能走一步算一步，慢慢地去完善。
@@ -333,19 +342,41 @@
 <blockquote>
 <p>初步实现了用echarts展示数据<br>整理了B站获取数据的api，并成功地使用superagent模块向B站发送请求并获取<br>将获取的数据去除不必要的数据重新组织了下json结构。</p>
 </blockquote>
-<p>整理后的json:<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div><div class="line">53</div><div class="line">54</div><div class="line">55</div><div class="line">56</div><div class="line">57</div><div class="line">58</div><div class="line">59</div></pre></td><td class="code"><pre><div class="line">&#123;</div><div class="line">  <span class="string">"mid"</span>: <span class="string">"2"</span>,</div><div class="line">  <span class="string">"name"</span>: <span class="string">"碧诗"</span>,</div><div class="line">  <span class="string">"sex"</span>: <span class="string">"男"</span>,</div><div class="line">  <span class="string">"face"</span>: <span class="string">"http://i1.hdslb.com/bfs/face/8b72192cc8ffda49f6fd1c25d3266a9f5616fc78.jpg"</span>,</div><div class="line">  <span class="string">"regtime"</span>: <span class="number">1245824205</span>,</div><div class="line">  <span class="string">"place"</span>: <span class="string">"上海市 浦东新区"</span>,</div><div class="line">  <span class="string">"birthday"</span>: <span class="string">"0000-09-19"</span>,</div><div class="line">  <span class="string">"fans"</span>: <span class="number">131190</span>,</div><div class="line">  <span class="string">"playNum"</span>: <span class="number">8129139</span>,</div><div class="line">  <span class="string">"current_level"</span>: <span class="number">5</span>,</div><div class="line">  <span class="string">"current_exp"</span>: <span class="number">27647</span>,</div><div class="line">  <span class="string">"fansinfo"</span>: [],</div><div class="line">  <span class="string">"videosinfo"</span>: &#123;</div><div class="line">    <span class="string">"submit"</span>: <span class="number">28</span>,</div><div class="line">    <span class="string">"tlist"</span>: &#123;</div><div class="line">      <span class="string">"1"</span>: &#123;</div><div class="line">        <span class="string">"tid"</span>: <span class="number">1</span>,</div><div class="line">        <span class="string">"name"</span>: <span class="string">"动画"</span>,</div><div class="line">        <span class="string">"count"</span>: <span class="number">8</span></div><div class="line">      &#125;,</div><div class="line">      <span class="comment">//...</span></div><div class="line">      <span class="string">"160"</span>: &#123;</div><div class="line">        <span class="string">"tid"</span>: <span class="number">160</span>,</div><div class="line">        <span class="string">"name"</span>: <span class="string">"生活"</span>,</div><div class="line">        <span class="string">"count"</span>: <span class="number">5</span></div><div class="line">      &#125;</div><div class="line">    &#125;,</div><div class="line">    <span class="string">"vlist"</span>: [</div><div class="line">      &#123;</div><div class="line">        <span class="string">"aid"</span>: <span class="number">910689</span>,</div><div class="line">        <span class="string">"video"</span>: &#123;</div><div class="line">          <span class="string">"view"</span>: <span class="number">258028</span>,</div><div class="line">          <span class="string">"danmaku"</span>: <span class="number">1679</span>,</div><div class="line">          <span class="string">"reply"</span>: <span class="number">1458</span>,</div><div class="line">          <span class="string">"favorite"</span>: <span class="number">554</span>,</div><div class="line">          <span class="string">"coin"</span>: <span class="number">1847</span>,</div><div class="line">          <span class="string">"share"</span>: <span class="number">19</span>,</div><div class="line">          <span class="string">"now_rank"</span>: <span class="number">0</span>,</div><div class="line">          <span class="string">"his_rank"</span>: <span class="number">43</span></div><div class="line">        &#125;</div><div class="line">      &#125;,</div><div class="line">      <span class="comment">//...</span></div><div class="line">      &#123;</div><div class="line">        <span class="string">"aid"</span>: <span class="number">5626817</span>,</div><div class="line">        <span class="string">"video"</span>: &#123;</div><div class="line">          <span class="string">"view"</span>: <span class="number">239717</span>,</div><div class="line">          <span class="string">"danmaku"</span>: <span class="number">419</span>,</div><div class="line">          <span class="string">"reply"</span>: <span class="number">4612</span>,</div><div class="line">          <span class="string">"favorite"</span>: <span class="number">1199</span>,</div><div class="line">          <span class="string">"coin"</span>: <span class="number">3347</span>,</div><div class="line">          <span class="string">"share"</span>: <span class="number">377</span>,</div><div class="line">          <span class="string">"now_rank"</span>: <span class="number">0</span>,</div><div class="line">          <span class="string">"his_rank"</span>: <span class="number">0</span></div><div class="line">        &#125;</div><div class="line">      &#125;</div><div class="line">    ]</div><div class="line">  &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
 <p>后续计划</p>
 <blockquote>
 <p>将获取数据的代码优化下，目前的代码简直是一坨屎，不忍直视<br>实现将数据存入数据库<br>前端方面重新设计下首页结构</p>
 </blockquote>
-<p>现在是早上7:37，一不小心就通宵了……</p>
 <hr>
-<h3 id="20170321"><a href="#20170321" class="headerlink" title="20170321"></a><em>20170321</em></h3><p>昨天将获取对象的代码改写了下 详情[学以致用]<br>但还是存在诸多问题</p>
+<h3 id="20170321"><a href="#20170321" class="headerlink" title="20170321"></a><em>20170321</em></h3><p>昨天将获取对象的代码改写了下<br>但还是存在诸多问题</p>
 <blockquote>
 <p>多个异步操作形成了强耦合<br>整段代码的逻辑不清晰</p>
 </blockquote>
 <hr>
-<h3 id="20170322"><a href="#20170322" class="headerlink" title="20170322"></a><em>20170322</em></h3>
+<h3 id="20170322"><a href="#20170322" class="headerlink" title="20170322"></a><em>20170322</em></h3><p>成功将爬来的数据存入了mongodb<img src="http://on16qa9r1.bkt.clouddn.com/20170322.png" alt=""><br>下一步计划</p>
+<blockquote>
+<p>实现从数据库中查询数据<br>实现前后端数据交互<br>重构前端业务逻辑</p>
+</blockquote>
+<hr>
+<h3 id="20170328"><a href="#20170328" class="headerlink" title="20170328"></a><em>20170328</em></h3><p>完成的目标</p>
+<blockquote>
+<p>将之前的数据库拆分为user、videos两张表<br>实现了查找数据与数据统计<br>使用ajax实现前后端通信</p>
+</blockquote>
+<p><img src="http://on16qa9r1.bkt.clouddn.com/20170328184437.png" alt=""></p>
+<p>下一步计划</p>
+<blockquote>
+<p>先将首页展示完成</p>
+</blockquote>
+<hr>
+<h3 id="20170408"><a href="#20170408" class="headerlink" title="20170408"></a><em>20170408</em></h3><p>完成的目标</p>
+<blockquote>
+<p>首页、排行、详情页面初步完成</p>
+</blockquote>
+<p>首页标题<br><img src="http://on16qa9r1.bkt.clouddn.com/20170408005014.png" alt=""><br>一系列数据的图表<br><img src="http://on16qa9r1.bkt.clouddn.com/20170408005054.png" alt=""><br>用于跳转至排行、详情页面<br><img src="http://on16qa9r1.bkt.clouddn.com/20170408005114.png" alt=""><br>up主用户名词云<br><img src="http://on16qa9r1.bkt.clouddn.com/20170408005125.png" alt=""><br>up主排行<br><img src="http://on16qa9r1.bkt.clouddn.com/20170408005303.png" alt=""><br>视频排行<br><img src="http://on16qa9r1.bkt.clouddn.com/20170408005326.png" alt=""><br>单个up详情页面<br><img src="http://on16qa9r1.bkt.clouddn.com/20170408005439.png" alt=""></p>
+<p>下一步计划</p>
+<blockquote>
+<p>将代码整理优化</p>
+</blockquote>
+
       
     </div>
 
@@ -494,7 +525,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#20170311"><span class="nav-number">1.</span> <span class="nav-text">20170311</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#20170313"><span class="nav-number">2.</span> <span class="nav-text">20170313</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#20170314"><span class="nav-number">3.</span> <span class="nav-text">20170314</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#20170315"><span class="nav-number">4.</span> <span class="nav-text">20170315</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#20170319"><span class="nav-number">5.</span> <span class="nav-text">20170319</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#20170321"><span class="nav-number">6.</span> <span class="nav-text">20170321</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#20170322"><span class="nav-number">7.</span> <span class="nav-text">20170322</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#20170311"><span class="nav-number">1.</span> <span class="nav-text">20170311</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#20170313"><span class="nav-number">2.</span> <span class="nav-text">20170313</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#20170314"><span class="nav-number">3.</span> <span class="nav-text">20170314</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#20170315"><span class="nav-number">4.</span> <span class="nav-text">20170315</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#20170319"><span class="nav-number">5.</span> <span class="nav-text">20170319</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#20170321"><span class="nav-number">6.</span> <span class="nav-text">20170321</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#20170322"><span class="nav-number">7.</span> <span class="nav-text">20170322</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#20170328"><span class="nav-number">8.</span> <span class="nav-text">20170328</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#20170408"><span class="nav-number">9.</span> <span class="nav-text">20170408</span></a></li></ol></div>
             
 
           </div>
